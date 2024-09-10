@@ -8,7 +8,7 @@ export const getStates = async () => {
             label: uf.nome
         }));
     } catch (error) {
-        console.error("Erro ao buscar UFs", error);
+        console.error("Error to get UFs", error);
         return [];
     }
 };
@@ -21,7 +21,7 @@ export const getCitiesByState = async (uf) => {
             label: city.nome
         }));
     } catch (error) {
-        console.error("Erro ao buscar cidades", error);
+        console.error("Error to get cities", error);
         return [];
     }
 };
