@@ -30,10 +30,10 @@ export const handleUpdateFarm = async (farmId, name, state, city, totalArea, pla
     }
 };
 
-export const handleUpdateCrop = async (name, farmId) => {
+export const handleUpdateCrop = async (names, farmId) => {
     try {
         const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/update/crops/crop/${farmId}`, {
-            name,
+            names,
         });
         return response.data.crop;
     } catch (error) {

@@ -133,7 +133,8 @@ export default function Update({ visible, setVisible, producer, onUpdate }) {
             await handleUpdateFarmer(producer.id, updatedProducer.name, updatedProducer.codenumber);
             await handleUpdateFarm(farm.id, farm.name, selectedState.value, selectedCity.value, farm.totalarea, farm.plantedarea, farm.nousedarea);
             
-            await Promise.all(crops.map(crop => handleUpdateCrop(crop.value, farm.id)));
+            const cropNames = crops.map(crop => crop.value);
+            await handleUpdateCrop(cropNames, farm.id); 
             
             notify("Dados atualizados com sucesso", "success");
             onUpdate();

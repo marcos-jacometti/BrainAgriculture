@@ -11,7 +11,7 @@ export default function PieChart() {
       },
       labels: [],
       title: {
-        text: 'Distribuição das Áreas Plantadas e Não Utilizadas',
+        text: 'Distribuição das Áreas',
         align: 'center',
         style: {
           fontSize: '15px',
